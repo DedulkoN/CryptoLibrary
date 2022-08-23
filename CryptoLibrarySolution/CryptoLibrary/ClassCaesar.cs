@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CryptoLibrary
 {
-    internal class ClassCaesar
+    internal class ClassCaesar:ICrypto
     {
         private readonly string Alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяabcdefghijklmnopqrstuvwxyz0123456789.,;: АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
