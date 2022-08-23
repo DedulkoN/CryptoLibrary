@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CryptoLibrary
 {
+    /// <summary>
+    /// Реализация алгоритма Цезаря
+    /// </summary>
     internal class ClassCaesar:ICrypto
     {
         private readonly string Alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяabcdefghijklmnopqrstuvwxyz0123456789.,;: АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ";

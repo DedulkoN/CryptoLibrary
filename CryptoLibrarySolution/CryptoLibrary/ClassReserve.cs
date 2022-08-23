@@ -6,17 +6,31 @@ using System.Threading.Tasks;
 
 namespace CryptoLibrary
 {
+    /// <summary>
+    /// Реализация алгоритма обратной записи
+    /// </summary>
     internal class ClassReserve:ICrypto
     {
+        /// <summary>
+        /// Шифрование
+        /// </summary>
+        /// <param name="Line">Изначальная строка</param>
+        /// <returns>Шифрованная трока</returns>
         public string EnCrypt(string Line)
         {
 
             StringBuilder result = new();
-            for(int i =0; i<Line.Length;i++)
+            for(int i = Line.Length-1; i>=0;i--)
                 result.Append(Line[i]);
 
             return result.ToString();
         }
+
+        /// <summary>
+        /// Дешифрование 
+        /// </summary>
+        /// <param name="CryptoLine">Шифрованная строка</param>
+        /// <returns>Расшифрованная строка</returns>
         public string DeCrypt(string CryptoLine)
         {
             return EnCrypt(CryptoLine);
