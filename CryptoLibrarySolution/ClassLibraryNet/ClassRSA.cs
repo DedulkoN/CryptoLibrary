@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.IO;
 
-namespace CryptoLibrary
+namespace ClassLibraryNet
 {
     public class ClassRSA
     {
@@ -15,9 +15,9 @@ namespace CryptoLibrary
 
         public void GenerateKeys(int keySize = 32)
         {
-            RSACryptoServiceProvider RSA = new()
+            RSACryptoServiceProvider RSA = new RSACryptoServiceProvider()
             {
-                KeySize = keySize
+                //KeySize = keySize
             };
             privateKey = RSA.ExportParameters(true);
             publicKey = RSA.ExportParameters(false);            
@@ -32,7 +32,7 @@ namespace CryptoLibrary
         {
             RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
             RSA.ImportParameters(publicKey);
-            return Convert.ToBase64String(RSA.Encrypt(Convert.FromBase64String(Line), false));
+            return Convert.ToString(RSA.Encrypt(Convert.FromBase64String(Line), false));
         }
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace CryptoLibrary
         {
             RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
             RSA.ImportParameters(privateKey);
-            return Convert.ToBase64String(RSA.Decrypt(Convert.FromBase64String(CryptoLine), false));
+            return Convert.ToString(RSA.Decrypt(Convert.FromBase64String(CryptoLine), false));
 
         }
 
@@ -54,7 +54,7 @@ namespace CryptoLibrary
             RSA.ImportParameters(publicKey);
             string key = RSA.ToXmlString(false);
 
-            FileStream f = new FileStream(FileName, FileMode.Append, FileAccess.Write);
+            FileStream f = new FileStream(FileName, FileMode.Create, FileAccess.Write);
             StreamWriter sw = new StreamWriter(f);
             sw.Write(key);            
             sw.Close();
@@ -67,7 +67,7 @@ namespace CryptoLibrary
             RSA.ImportParameters(privateKey);
             string key = RSA.ToXmlString(true);
 
-            FileStream f = new FileStream(FileName, FileMode.Append, FileAccess.Write);
+            FileStream f = new FileStream(FileName, FileMode.Create, FileAccess.Write);
             StreamWriter sw = new StreamWriter(f);
             sw.Write(key);
             sw.Close();
@@ -76,7 +76,7 @@ namespace CryptoLibrary
         public void LoadPublicKeyToFile(string FileName)
         {
             string key;
-            FileStream f = new FileStream(FileName, FileMode.Append, FileAccess.Read);
+            FileStream f = new FileStream(FileName, FileMode.Open, FileAccess.Read);
             StreamReader sw = new StreamReader(f);
             key= sw.ReadToEnd();
             sw.Close();
@@ -89,7 +89,7 @@ namespace CryptoLibrary
         public void LoadPrivateKeyToFile(string FileName)
         {
             string key;
-            FileStream f = new FileStream(FileName, FileMode.Append, FileAccess.Read);
+            FileStream f = new FileStream(FileName, FileMode.Open, FileAccess.Read);
             StreamReader sw = new StreamReader(f);
             key = sw.ReadToEnd();
             sw.Close();

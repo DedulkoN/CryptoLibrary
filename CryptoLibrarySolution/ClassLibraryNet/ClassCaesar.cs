@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CryptoLibrary
+namespace ClassLibraryNet
 {
     /// <summary>
     /// Реализация алгоритма Цезаря
@@ -20,7 +20,7 @@ namespace CryptoLibrary
         /// <returns>Зашифрованнная строка</returns>
         public static string EnCrypt(string Line)
         {
-            StringBuilder result = new();
+            StringBuilder result = new StringBuilder();
 
             for(int i = 0; i<Line.Length; i++)
             {
@@ -39,7 +39,7 @@ namespace CryptoLibrary
         /// <returns>Расшифрованная строка</returns>
         public static string DeCrypt(string CryptoLine)
         {
-            StringBuilder result = new();
+            StringBuilder result = new StringBuilder();
 
             for (int i = 0; i < CryptoLine.Length; i++)
             {

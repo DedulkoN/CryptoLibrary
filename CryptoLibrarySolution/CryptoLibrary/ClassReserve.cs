@@ -9,14 +9,14 @@ namespace CryptoLibrary
     /// <summary>
     /// Реализация алгоритма обратной записи
     /// </summary>
-    internal class ClassReserve:ICrypto
+    public static class ClassReserve
     {
         /// <summary>
         /// Шифрование
         /// </summary>
         /// <param name="Line">Изначальная строка</param>
         /// <returns>Шифрованная трока</returns>
-        public string EnCrypt(string Line)
+        public static string EnCrypt(string Line)
         {
 
             StringBuilder result = new();
@@ -31,7 +31,7 @@ namespace CryptoLibrary
         /// </summary>
         /// <param name="CryptoLine">Шифрованная строка</param>
         /// <returns>Расшифрованная строка</returns>
-        public string DeCrypt(string CryptoLine)
+        public static string DeCrypt(string CryptoLine)
         {
             return EnCrypt(CryptoLine);
         }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 
-namespace CryptoLibrary
+namespace ClassLibraryNet
 {
     /// <summary>
     /// Шифрование простой престановкой
@@ -18,7 +18,7 @@ namespace CryptoLibrary
         /// <returns>Расшифрованная строка</returns>
         public static string DeCrypt(string CryptoLine)
         {
-            StringBuilder rezult = new();
+            StringBuilder rezult = new StringBuilder();
             for (int i = 0; i < CryptoLine.Length - 1; i += 2)
             {
                 rezult.Append(CryptoLine[i + 1].ToString() + CryptoLine[i].ToString());
@@ -39,7 +39,7 @@ namespace CryptoLibrary
         /// <returns>Шифрованная трока</returns>
         public static string EnCrypt(string Line)
         {
-            StringBuilder rezult = new();
+            StringBuilder rezult = new StringBuilder();
             for (int i = 0; i < Line.Length - 1; i += 2)
             {
                 rezult.Append(Line[i + 1].ToString() + Line[i].ToString() );
