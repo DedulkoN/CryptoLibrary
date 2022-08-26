@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.IO;
 
 namespace ClasesCrypto
 {
+    /// <summary>
+    /// Шифрование алгоритмом TripleDES
+    /// </summary>
     public class ClassTripleDES
     {
         /// <summary>
@@ -31,9 +31,31 @@ namespace ClasesCrypto
         /// <returns>Зашифрованная строка</returns>
         public static string EnCrypt(string data)
         {
+            return EnCrypt(data, password);
+        }
+
+        /// <summary>
+        /// Дешифрование
+        /// </summary>
+        /// <param name="data">Шифрованная строка</param>
+        /// <returns>Дешифрованная строка</returns>
+        public static string DeCrypt(string data)
+        {
+            return DeCrypt(data, password);
+        }
+
+
+        /// <summary>
+        /// Зашифровать строку
+        /// </summary>
+        /// <param name="data">Строка, которую необходимо зашифровать</param>
+        ///  <param name="key">Ключ шифрования</param>
+        /// <returns>Зашифрованная строка</returns>
+        public static string EnCrypt(string data, string key)
+        {
             TripleDES sa = TripleDESCryptoServiceProvider.Create();
             ICryptoTransform ct = sa.CreateEncryptor(
-                (new PasswordDeriveBytes(password, null)).GetBytes(16),
+                (new PasswordDeriveBytes(key, null)).GetBytes(16),
                 new byte[16]);
 
             MemoryStream ms = new MemoryStream();
@@ -49,12 +71,13 @@ namespace ClasesCrypto
         /// Дешифрование
         /// </summary>
         /// <param name="data">Шифрованная строка</param>
+        /// <param name="key">Ключ шифрования</param>
         /// <returns>Дешифрованная строка</returns>
-        public static string DeCrypt(string data)
+        public static string DeCrypt(string data, string key)
         {
             TripleDES sa = TripleDESCryptoServiceProvider.Create();
             ICryptoTransform ct = sa.CreateDecryptor(
-                (new PasswordDeriveBytes(password, null)).GetBytes(16),
+                (new PasswordDeriveBytes(key, null)).GetBytes(16),
                 new byte[16]);
 
             MemoryStream ms = new MemoryStream(Convert.FromBase64String(data));
@@ -63,5 +86,7 @@ namespace ClasesCrypto
             StreamReader sr = new StreamReader(cs);
             return sr.ReadToEnd();
         }
+
+
     }
 }

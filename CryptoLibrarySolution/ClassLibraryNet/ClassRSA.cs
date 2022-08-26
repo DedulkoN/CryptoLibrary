@@ -1,18 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.IO;
 
 namespace ClasesCrypto
 {
+    /// <summary>
+    /// Шифрование алгоритмом RSA
+    /// </summary>
     public class ClassRSA
     {
         RSAParameters privateKey;
         RSAParameters publicKey;
 
+        /// <summary>
+        /// Генерация ключей шифрования
+        /// </summary>
         public void GenerateKeys()
         {
             RSACryptoServiceProvider RSA = new RSACryptoServiceProvider()
@@ -51,6 +54,10 @@ namespace ClasesCrypto
 
         }
 
+        /// <summary>
+        /// Сохрание публичного ключа в файл xml
+        /// </summary>
+        /// <param name="FileName">Адрес и имя файла</param>
         public void SavePublicKeyToFile(string FileName)
         {
             RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
@@ -64,7 +71,11 @@ namespace ClasesCrypto
             f.Close();
         }
 
-        public void SavePrivatecKeyToFile(string FileName)
+        /// <summary>
+        /// Сохрание приватного ключа в файл xml
+        /// </summary>
+        /// <param name="FileName">Адрес и имя файла</param>
+        public void SavePrivateKeyToFile(string FileName)
         {
             RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
             RSA.ImportParameters(privateKey);
@@ -76,6 +87,12 @@ namespace ClasesCrypto
             sw.Close();
             f.Close();
         }
+
+
+        /// <summary>
+        /// Чтение публичного ключа из файла xml
+        /// </summary>
+        /// <param name="FileName">Адрес и имя файла</param>
         public void LoadPublicKeyToFile(string FileName)
         {
             string key;
@@ -89,6 +106,10 @@ namespace ClasesCrypto
             publicKey = RSA.ExportParameters(false);
         }
 
+        /// <summary>
+        /// Чтение приватного ключа из файла xml
+        /// </summary>
+        /// <param name="FileName">Адрес и имя файла</param>
         public void LoadPrivateKeyToFile(string FileName)
         {
             string key;
@@ -101,6 +122,51 @@ namespace ClasesCrypto
             RSA.FromXmlString(key);
             privateKey = RSA.ExportParameters(true);
         }
+
+        /// <summary>
+        /// Получение публичного ключа
+        /// </summary>
+        /// <returns>Строка в xml формате</returns>
+        public string GetPublicKeyToXmlString()
+        {
+            RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
+            RSA.ImportParameters(publicKey);
+            return RSA.ToXmlString(false);
+        }
+
+        /// <summary>
+        /// Получение приватного ключа
+        /// </summary>
+        /// <returns>Строка в xml формате</returns>
+        public string GetPrivateKeyToXmlString()
+        {
+            RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
+            RSA.ImportParameters(privateKey);
+            return RSA.ToXmlString(true);
+        }
+
+        /// <summary>
+        /// Установить открытый ключ
+        /// </summary>
+        /// <param name="xmlString">Ключ в формате XML-строки</param>
+        public void SetPublicKeyFromXmlString(string xmlString)
+        {
+            RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
+            RSA.FromXmlString(xmlString);
+            publicKey = RSA.ExportParameters(false);
+        }
+
+        /// <summary>
+        /// Установить закрытый ключ
+        /// </summary>
+        /// <param name="xmlString">Ключ в формате XML-строки</param>
+        public void SetPrivateKeyFromXmlString(string xmlString)
+        {
+            RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
+            RSA.FromXmlString(xmlString);
+            privateKey = RSA.ExportParameters(true);
+        }
+
 
     }
 }

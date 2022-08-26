@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
+
 
 namespace ClasesCrypto
 {
@@ -11,6 +8,9 @@ namespace ClasesCrypto
     /// </summary>
     public static class ClassCaesar
     {
+        /// <summary>
+        /// Алфавит
+        /// </summary>
         private static readonly string Alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяabcdefghijklmnopqrstuvwxyz0123456789.,;: АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         /// <summary>

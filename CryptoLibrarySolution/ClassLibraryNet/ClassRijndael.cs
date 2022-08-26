@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 using System.Security.Cryptography;
 
@@ -10,6 +7,7 @@ namespace ClasesCrypto
 {
     /// <summary>
     /// Класс шифрования. Алгоритм - Rijndael
+    /// немноги устаревший
     /// </summary>
     public static class ClassRijndael 
     {
@@ -82,6 +80,49 @@ namespace ClasesCrypto
 
             MemoryStream ms = new MemoryStream(data);
             return new CryptoStream(ms, ct, CryptoStreamMode.Read);
+        }
+
+
+        /// <summary>
+        /// Зашифровать строку
+        /// </summary>
+        /// <param name="data">Строка, которую необходимо зашифровать</param>
+        ///  <param name="key">Ключ шифрования</param>
+        /// <returns>Зашифрованная строка</returns>
+        public static string EnCrypt(string data, string key)
+        {
+            Rijndael sa = Rijndael.Create();
+            ICryptoTransform ct = sa.CreateEncryptor(
+                (new PasswordDeriveBytes(key, null)).GetBytes(16),
+                new byte[16]);
+
+            MemoryStream ms = new MemoryStream();
+            CryptoStream cs = new CryptoStream(ms, ct, CryptoStreamMode.Write);
+
+            cs.Write(Encoding.UTF8.GetBytes(data), 0, data.Length);
+            cs.FlushFinalBlock();
+
+            return Convert.ToBase64String(ms.ToArray());
+        }
+
+        /// <summary>
+        /// Дешифрование
+        /// </summary>
+        /// <param name="data">Шифрованная строка</param>
+        /// <param name="key">Ключ шифрования</param>
+        /// <returns>Дешифрованная строка</returns>
+        public static string DeCrypt(string data, string key)
+        {
+            Rijndael sa = Rijndael.Create();
+            ICryptoTransform ct = sa.CreateDecryptor(
+                (new PasswordDeriveBytes(key, null)).GetBytes(16),
+                new byte[16]);
+
+            MemoryStream ms = new MemoryStream(Convert.FromBase64String(data));
+            CryptoStream cs = new CryptoStream(ms, ct, CryptoStreamMode.Read);
+
+            StreamReader sr = new StreamReader(cs);
+            return sr.ReadToEnd();
         }
 
     }
