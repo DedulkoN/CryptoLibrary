@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.IO;
 
-namespace ClassLibraryNet
+namespace ClasesCrypto
 {
     public class ClassRSA
     {
         RSAParameters privateKey;
         RSAParameters publicKey;
 
-        public void GenerateKeys(int keySize = 32)
+        public void GenerateKeys()
         {
             RSACryptoServiceProvider RSA = new RSACryptoServiceProvider()
             {
@@ -30,9 +30,11 @@ namespace ClassLibraryNet
         /// <returns>Шифрованная трока</returns>
         public string EnCrypt(string Line)
         {
+            UnicodeEncoding byteConverter = new UnicodeEncoding();
             RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
             RSA.ImportParameters(publicKey);
-            return Convert.ToString(RSA.Encrypt(Convert.FromBase64String(Line), false));
+
+            return System.Convert.ToBase64String(RSA.Encrypt(byteConverter.GetBytes(Line), false));
         }
 
         /// <summary>
@@ -42,9 +44,10 @@ namespace ClassLibraryNet
         /// <returns>Расшифрованная строка</returns>
         public string DeCrypt(string CryptoLine)
         {
+            UnicodeEncoding byteConverter = new UnicodeEncoding();
             RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
             RSA.ImportParameters(privateKey);
-            return Convert.ToString(RSA.Decrypt(Convert.FromBase64String(CryptoLine), false));
+            return byteConverter.GetString(RSA.Decrypt(Convert.FromBase64String(CryptoLine), false));
 
         }
 

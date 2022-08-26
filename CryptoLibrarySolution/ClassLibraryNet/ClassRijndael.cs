@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Security.Cryptography;
 
-namespace ClassLibraryNet
+namespace ClasesCrypto
 {
     /// <summary>
     /// Класс шифрования. Алгоритм - Rijndael
@@ -24,7 +24,7 @@ namespace ClassLibraryNet
         /// <param name="NewKey"></param>
         static public void SetKey(string NewKey)
         {
-            password = NewKey;
+            password = NewKey;            
         }
 
 
