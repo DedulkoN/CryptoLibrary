@@ -33,7 +33,7 @@ namespace ConsoleAppTest
                 Console.WriteLine(L2);
                 L1 = classRSA.DeCrypt(L2);
                 Console.WriteLine(L1);
-                classRSA.SavePrivatecKeyToFile("pri");
+                classRSA.SavePrivateKeyToFile("pri");
                 classRSA.SavePublicKeyToFile("pub");
                 Console.WriteLine();
 
