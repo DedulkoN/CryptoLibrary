@@ -18,10 +18,8 @@ namespace ClasesCrypto
         /// </summary>
         public void GenerateKeys()
         {
-            RSACryptoServiceProvider RSA = new RSACryptoServiceProvider()
-            {
-                //KeySize = keySize
-            };
+            RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
+            
             privateKey = RSA.ExportParameters(true);
             publicKey = RSA.ExportParameters(false);            
         }
