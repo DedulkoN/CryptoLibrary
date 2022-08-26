@@ -43,12 +43,15 @@
   <ItemGroup>
     <Compile Include="ClassAES.cs" />
     <Compile Include="ClassCaesar.cs" />
+    <Compile Include="ClassDES.cs" />
+    <Compile Include="ClassRC2.cs" />
     <Compile Include="ClassReserve.cs" />
     <Compile Include="ClassRijndael.cs" />
     <Compile Include="ClassRSA.cs" />
     <Compile Include="ClassSHA256.cs" />
     <Compile Include="ClassSHA512.cs" />
     <Compile Include="ClassTransposition.cs" />
+    <Compile Include="ClassTripleDES.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -27,6 +27,8 @@ namespace ConsoleAppTest
                     classRSA.LoadPrivateKeyToFile("pri");
                 }
                 catch { classRSA.GenerateKeys(); }
+
+
                 L2 = classRSA.EnCrypt(L1);                 
                 Console.WriteLine(L2);
                 L1 = classRSA.DeCrypt(L2);
@@ -77,6 +79,27 @@ namespace ConsoleAppTest
                 L2 = ClassAES.EnCrypt(L1);
                 Console.WriteLine(L2);
                 L1 = ClassAES.DeCrypt(L2);
+                Console.WriteLine(L1);
+                Console.WriteLine();
+
+                Console.WriteLine("ClassDES");
+                L2 = ClassDES.EnCrypt(L1);
+                Console.WriteLine(L2);
+                L1 = ClassDES.DeCrypt(L2);
+                Console.WriteLine(L1);
+                Console.WriteLine();
+
+                Console.WriteLine("ClassRC2");
+                L2 = ClassRC2.EnCrypt(L1);
+                Console.WriteLine(L2);
+                L1 = ClassRC2.DeCrypt(L2);
+                Console.WriteLine(L1);
+                Console.WriteLine();
+
+                Console.WriteLine("ClassTripleDES");
+                L2 = ClassTripleDES.EnCrypt(L1);
+                Console.WriteLine(L2);
+                L1 = ClassTripleDES.DeCrypt(L2);
                 Console.WriteLine(L1);
                 Console.WriteLine();
 
