@@ -1,7 +1,7 @@
 # CryptoLibrary
 
-[English](#English)
-[Русский](#Русский)
+[English](#English)   
+[Русский](#Русский)   
 
 
 ## English
@@ -9,16 +9,16 @@ Class library that implements string encryption/hashing according to the selecte
 
 ### Simple algorithms
 
-The ClassCaesar class implements the Modified Caesar algorithm
-The ClassReserve class implements the string writeback algorithm
-The ClassTransposition class implements the simple permutation algorithm
+The ClassCaesar class implements the Modified Caesar algorithm   
+The ClassReserve class implements the string writeback algorithm   
+The ClassTransposition class implements the simple permutation algorithm   
 
 ### Symmetric algorithms
 
-ClassAES - implements the AES algorithm
-ClassDES - implements the DES algorithm
-ClassRC2 - implements the RC2 algorithm
-ClassTripleDES - implements the TripleDES algorithm
+ClassAES - implements the AES algorithm   
+ClassDES - implements the DES algorithm   
+ClassRC2 - implements the RC2 algorithm   
+ClassTripleDES - implements the TripleDES algorithm   
 
 ### Asymmetric algorithms
 
@@ -26,8 +26,8 @@ ClassRSA - implements the RSA algorithm
 
 ### Hash Algorithms
 
-ClassSHA256 - implements a 256-bit version of the SHA algorithm
-ClassSHA512 - implements a 512-bit version of the SHA algorithm
+ClassSHA256 - implements a 256-bit version of the SHA algorithm   
+ClassSHA512 - implements a 512-bit version of the SHA algorithm   
 
 
 ## Русский
@@ -52,5 +52,5 @@ ClassRSA - реализует алгоритм RSA
 
 ### Алгоритмы Хеширования 
 
-ClassSHA256 - реализует 256-битную версию алгоритма SHA
-ClassSHA512 - реализует 512-битную версию алгоритма SHA
+ClassSHA256 - реализует 256-битную версию алгоритма SHA   
+ClassSHA512 - реализует 512-битную версию алгоритма SHA   
