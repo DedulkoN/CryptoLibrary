@@ -111,6 +111,13 @@ namespace ConsoleAppTest
                 Console.WriteLine(L1);
                 Console.WriteLine();
 
+                Console.WriteLine("ClassSalt");
+                L2 = ClassSalt.AddSalt(L1);
+                Console.WriteLine(L2);
+                L1 = ClassSalt.DeleteSalt(L2);
+                Console.WriteLine(L1);
+                Console.WriteLine();
+
 
 
             }

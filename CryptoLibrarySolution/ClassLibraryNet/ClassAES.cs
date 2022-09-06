@@ -5,7 +5,8 @@ using System.IO;
 
 
 namespace ClasesCrypto
-{    /// <summary>
+{   
+    /// <summary>
      /// Класс шифрования. Алгоритм - AES 
      /// результат подозрительно похож на Rijndael
      /// </summary>

@@ -13,7 +13,7 @@ namespace ClasesCrypto
         /// </summary>
         private static readonly string Alphabet1 = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяabcdefghijklmnopqrstuvwxyz0123456789.,;: АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ";
         /// <summary>
-        /// Алфавить для замены
+        /// Алфавит для замены
         /// </summary>
         private static readonly string Alphabet2 = " QWERTYUIOPASDFGHJKLZXCVBNM.,;:ЁЙЦУКЕНГШЩЗХЪЭЖДЛОРПАВЫФЯЧСМИТЬБЮюбьтимсчяфывапролджэъхзщшгнекуцйёmnbvcxzlkjhgfdsapoiuytrewq0123456789";
 

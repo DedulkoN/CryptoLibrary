@@ -30,6 +30,10 @@ ClassRSA - implements the RSA algorithm
 ClassSHA256 - implements a 256-bit version of the SHA algorithm   
 ClassSHA512 - implements a 512-bit version of the SHA algorithm   
 
+### Additional functions    
+
+ClassSalt - implements functions for adding salt to a string    
+
 
 ## Русский
 Библиотека классов реализующих шифрование/хеширование строки по выбранному алгоритму
@@ -56,3 +60,7 @@ ClassRSA - реализует алгоритм RSA
 
 ClassSHA256 - реализует 256-битную версию алгоритма SHA   
 ClassSHA512 - реализует 512-битную версию алгоритма SHA   
+
+### Дополнительные функции    
+
+ClassSalt - реализует функции добавления соли в строку
