@@ -4,7 +4,7 @@
 namespace ClasesCrypto
 {
     /// <summary>
-    /// Реализация алгоритма Цезаря
+    /// Реализация алгоритма Цезаря, вариант Вижинера
     /// </summary>
     public static class ClassCaesar
     {
@@ -14,7 +14,7 @@ namespace ClasesCrypto
         private static readonly string Alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяabcdefghijklmnopqrstuvwxyz0123456789.,;: АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         /// <summary>
-        /// Шифрование алгоритмом Цезаря (смещением)
+        /// Шифрование алгоритмом Цезаря (смещением), вариант Вижинера
         /// </summary>
         /// <param name="Line">Входная строка</param>
         /// <returns>Зашифрованнная строка</returns>
@@ -44,7 +44,7 @@ namespace ClasesCrypto
             for (int i = 0; i < CryptoLine.Length; i++)
             {
                 int index = 0;
-                for (; CryptoLine[i] != Alphabet[index]; index++) ;
+                for (; CryptoLine[i] != Alphabet[index]; index++);
 
                 result.Append(Alphabet[(index - i + Alphabet.Length) % Alphabet.Length]);
             }

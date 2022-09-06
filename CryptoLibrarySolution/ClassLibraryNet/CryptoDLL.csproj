@@ -44,6 +44,7 @@
     <Compile Include="ClassAES.cs" />
     <Compile Include="ClassCaesar.cs" />
     <Compile Include="ClassDES.cs" />
+    <Compile Include="ClassPair.cs" />
     <Compile Include="ClassRC2.cs" />
     <Compile Include="ClassReserve.cs" />
     <Compile Include="ClassRijndael.cs" />

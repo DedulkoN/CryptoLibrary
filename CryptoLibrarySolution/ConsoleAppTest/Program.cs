@@ -104,6 +104,14 @@ namespace ConsoleAppTest
                 Console.WriteLine();
 
 
+                Console.WriteLine("ClassPair");
+                L2 = ClassPair.EnCrypt(L1);
+                Console.WriteLine(L2);
+                L1 = ClassPair.DeCrypt(L2);
+                Console.WriteLine(L1);
+                Console.WriteLine();
+
+
 
             }
             catch(Exception e)

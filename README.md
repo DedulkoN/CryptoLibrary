@@ -5,13 +5,14 @@
 
 
 ## English
-Class library that implements string encryption/hashing according to the selected algorithm
+Class library that implements string encryption/hashing according to the selected algorithm.
 
 ### Simple algorithms
 
 The ClassCaesar class implements the Modified Caesar algorithm   
 The ClassReserve class implements the string writeback algorithm   
 The ClassTransposition class implements the simple permutation algorithm   
+The ClassPair class implements the pairwise permutation algorithm
 
 ### Symmetric algorithms
 
@@ -38,6 +39,7 @@ ClassSHA512 - implements a 512-bit version of the SHA algorithm
 Класс ClassCaesar реализует Модифицированный алгоритм Цезаря  
 Класс ClassReserve реализует алгоритм обратной записи строки  
 Класс ClassTransposition реализует алгоритм просто перестановки  
+Класс ClassPair реализует алгоритм парной перестановки
 
 ### Симетричные алгоритмы  
 
