@@ -118,6 +118,13 @@ namespace ConsoleAppTest
                 Console.WriteLine(L1);
                 Console.WriteLine();
 
+                Console.WriteLine("ClassMatrix");
+                L2 = ClassMatrix.EnCrypt(L1);
+                Console.WriteLine(L2);
+                L1 = ClassMatrix.DeCrypt(L2);
+                Console.WriteLine(L1);
+                Console.WriteLine();
+
 
 
             }
