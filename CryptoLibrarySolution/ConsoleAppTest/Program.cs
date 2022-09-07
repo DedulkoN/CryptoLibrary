@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ClasesCrypto;
 
 
@@ -51,12 +47,7 @@ namespace ConsoleAppTest
                 Console.WriteLine(L1);
                 Console.WriteLine();
 
-                Console.WriteLine("ClassRijndael");
-                L2 = ClassRijndael.EnCrypt(L1);
-                Console.WriteLine(L2);
-                L1 = ClassRijndael.DeCrypt(L2);
-                Console.WriteLine(L1);
-                Console.WriteLine();
+
 
                 Console.WriteLine("Sha512");
                 L2 = ClassSHA512.EnCrypt(L1);
@@ -73,6 +64,22 @@ namespace ConsoleAppTest
                 Console.WriteLine("ClassSHA256");
                 L2 = ClassSHA256.EnCrypt(L1);
                 Console.WriteLine(L2);
+                Console.WriteLine();
+
+                Console.WriteLine("ClassRijndael");
+                L2 = ClassRijndael.EnCrypt(L1);
+                Console.WriteLine(L2);
+                L1 = ClassRijndael.DeCrypt(L2);
+                Console.WriteLine(L1);
+                Console.WriteLine();
+
+
+                Console.WriteLine("ClassRijndael next key");
+                ClassRijndael.SetKey("next key");
+                L2 = ClassRijndael.EnCrypt(L1);
+                Console.WriteLine(L2);
+                L1 = ClassRijndael.DeCrypt(L2);
+                Console.WriteLine(L1);
                 Console.WriteLine();
 
                 Console.WriteLine("ClassAES");
@@ -119,6 +126,14 @@ namespace ConsoleAppTest
                 Console.WriteLine();
 
                 Console.WriteLine("ClassMatrix");
+                L2 = ClassMatrix.EnCrypt(L1);
+                Console.WriteLine(L2);
+                L1 = ClassMatrix.DeCrypt(L2);
+                Console.WriteLine(L1);
+                Console.WriteLine();
+
+                Console.WriteLine("ClassMatrix next key");
+                ClassMatrix.SetKey("set key");
                 L2 = ClassMatrix.EnCrypt(L1);
                 Console.WriteLine(L2);
                 L1 = ClassMatrix.DeCrypt(L2);

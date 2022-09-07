@@ -15,7 +15,7 @@ namespace ClasesCrypto
         private static readonly string Alphabet = " QWERTYUIOPASDFGHJKLZXCVBNM.,;:ЁЙЦУКЕНГШЩЗХЪЭЖДЛОРПАВЫФЯЧСМИТЬБЮюбьтимсчяфывапролджэъхзщшгнекуцйёmnbvcxzlkjhgfdsapoiuytrewq0123456789";
 
         /// <summary>
-        /// Добавить соль
+        /// Добавить случайную соль
         /// </summary>
         /// <param name="Line">изначальная строка</param>
         /// <returns>Результат-строка</returns>
@@ -33,13 +33,37 @@ namespace ClasesCrypto
 
             return result.ToString();
 
-        }       
+        }
+
+        /// <summary>
+        /// Добавить заданную соль
+        /// </summary>
+        /// <param name="Line">изначальная строка</param>
+        /// <param name="keyString">Строка с солью</param>
+        /// <returns>Результат-строка</returns>
+        static public string AddSalt(string Line, string keyString)
+        {
+            StringBuilder result = new StringBuilder();
+           
+            int i = 0;
+            foreach (char c in Line)
+            {
+                result.Append(c);
+                result.Append(keyString[i]);
+                i++;
+                if (i == keyString.Length) i = 0;
+            }
+
+            return result.ToString();
+
+        }
+
 
         /// <summary>
         /// Удаление соли из строки
         /// </summary>
         /// <param name="Line">Строка с солью</param>
-        /// <returns>СТрока без соли</returns>
+        /// <returns>Строка без соли</returns>
         static public string DeleteSalt(string Line)
         {
             StringBuilder result = new StringBuilder();
@@ -49,6 +73,8 @@ namespace ClasesCrypto
 
             return result.ToString();
         }
+
+
 
 
 
