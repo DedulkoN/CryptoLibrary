@@ -113,5 +113,14 @@ namespace ClasesCrypto
             return result.ToString();
         }
 
+        /// <summary>
+        /// Смена ключа шифрования
+        /// </summary>
+        /// <param name="NewKey">Новый ключ</param>
+        static public void SetKey(string NewKey)
+        {
+            key = NewKey;
+        }
+
     }
 }
