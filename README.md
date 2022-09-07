@@ -45,7 +45,7 @@ ClassSalt - implements functions for adding salt to a string
 Класс ClassCaesar реализует Модифицированный алгоритм Цезаря  
 Класс ClassReserve реализует алгоритм обратной записи строки  
 Класс ClassTransposition реализует алгоритм простой перестановки  
-Класс ClassPair реализует алгоритм парной замены
+Класс ClassPair реализует алгоритм парной замены    
 Класс ClassMatrix реализует матричный метод    
 
 ### Симетричные алгоритмы  
