@@ -12,7 +12,7 @@ Class library that implements string encryption/hashing according to the selecte
 The ClassCaesar class implements the Modified Caesar algorithm   
 The ClassReserve class implements the string writeback algorithm   
 The ClassTransposition class implements the simple permutation algorithm   
-The ClassPair class implements the pair replacement algorithm
+The ClassPair class implements the pair replacement algorithm    
 The ClassMatrix class implements the matrix method
 
 ### Symmetric algorithms
@@ -46,7 +46,7 @@ ClassSalt - implements functions for adding salt to a string
 Класс ClassReserve реализует алгоритм обратной записи строки  
 Класс ClassTransposition реализует алгоритм простой перестановки  
 Класс ClassPair реализует алгоритм парной замены
-Класс ClassMatrix реализует матричный метод
+Класс ClassMatrix реализует матричный метод    
 
 ### Симетричные алгоритмы  
 
