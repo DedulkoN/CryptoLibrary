@@ -119,7 +119,7 @@ namespace ClasesCrypto
         /// <param name="NewKey">Новый ключ</param>
         static public void SetKey(string NewKey)
         {
-            if (key.Length > 0) key = NewKey;
+            if (NewKey.Length > 0) key = NewKey;
             else throw new System.Exception("Ключ шифрования должен быть длиннее 0");
         }
 
