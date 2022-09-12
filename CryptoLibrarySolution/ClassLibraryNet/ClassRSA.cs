@@ -17,7 +17,7 @@ namespace ClasesCrypto
         /// Генерация ключей шифрования
         /// </summary>
         public void GenerateKeys()
-        {
+        {            
             RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
             
             privateKey = RSA.ExportParameters(true);
