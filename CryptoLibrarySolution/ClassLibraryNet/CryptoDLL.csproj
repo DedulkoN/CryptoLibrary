@@ -52,6 +52,7 @@
     <Compile Include="ClassRSA.cs" />
     <Compile Include="ClassSalt.cs" />
     <Compile Include="ClassSHA256.cs" />
+    <Compile Include="ClassSHA384.cs" />
     <Compile Include="ClassSHA512.cs" />
     <Compile Include="ClassTransposition.cs" />
     <Compile Include="ClassTripleDES.cs" />

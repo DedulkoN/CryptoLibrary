@@ -54,6 +54,11 @@ namespace ConsoleAppTest
                 Console.WriteLine(L2);
                 Console.WriteLine();
 
+                Console.WriteLine("Sha512 _");
+                L2 = ClassSHA512.EnCrypt(L1);
+                Console.WriteLine(L2);
+                Console.WriteLine();
+
                 Console.WriteLine("Transpotion");
                 L2 = ClassTransposition.EnCrypt(L1);
                 Console.WriteLine(L2);
@@ -139,6 +144,13 @@ namespace ConsoleAppTest
                 L1 = ClassMatrix.DeCrypt(L2);
                 Console.WriteLine(L1);
                 Console.WriteLine();
+
+                Console.WriteLine("Sha384");
+                L2 = ClassSHA384.EnCrypt(L1);
+                Console.WriteLine(L2);
+                Console.WriteLine();
+
+
 
 
 
