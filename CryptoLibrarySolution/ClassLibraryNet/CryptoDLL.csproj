@@ -45,6 +45,7 @@
     <Compile Include="ClassCaesar.cs" />
     <Compile Include="ClassDES.cs" />
     <Compile Include="ClassMatrix.cs" />
+    <Compile Include="ClassMD5.cs" />
     <Compile Include="ClassPair.cs" />
     <Compile Include="ClassRC2.cs" />
     <Compile Include="ClassReserve.cs" />
