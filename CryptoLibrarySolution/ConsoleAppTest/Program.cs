@@ -155,6 +155,11 @@ namespace ConsoleAppTest
                 Console.WriteLine(L2);
                 Console.WriteLine();
 
+                Console.WriteLine("ClassSHA1");
+                L2 = ClassSHA1.EnCrypt(L1);
+                Console.WriteLine(L2);
+                Console.WriteLine();
+
 
 
             }

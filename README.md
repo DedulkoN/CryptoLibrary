@@ -29,6 +29,7 @@ ClassRSA - implements the RSA algorithm
 
 ### Hash Algorithms
 
+ClassSHA1 - implements a 160-bit version of the SHA algorithm   
 ClassSHA256 - implements a 256-bit version of the SHA algorithm    
 ClassSHA384 - implements a 384-bit version of the SHA algorithm    
 ClassSHA512 - implements a 512-bit version of the SHA algorithm    
@@ -65,6 +66,7 @@ ClassRSA - реализует алгоритм RSA
 
 ### Алгоритмы Хеширования 
 
+ClassSHA1 - реализует 160-битную версию алгоритма SHA    
 ClassSHA256 - реализует 256-битную версию алгоритма SHA   
 ClassSHA384 - реализует 384-битную версию алгоритма SHA   
 ClassSHA512 - реализует 512-битную версию алгоритма SHA   
