@@ -19,7 +19,7 @@ namespace ClasesCrypto
         /// <summary>
         /// Ключ шифрования
         /// </summary>
-        private static string key = "AmЩсCdJЫsdукЫВsdd9ыw34 .";
+        private static string key = "AmЩсCdJЫsdу;кЫВsdd9ыw345рsdЫ .";
 
         /// <summary>
         /// Конструктор, создание матрицы символов
