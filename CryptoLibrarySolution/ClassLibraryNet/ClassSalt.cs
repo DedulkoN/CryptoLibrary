@@ -12,7 +12,7 @@ namespace ClasesCrypto
         /// <summary>
         /// Алфавит
         /// </summary>
-        private static readonly string Alphabet = " QWERTYUIOPASDFGHJKLZXCVBNM.,;:ЁЙЦУКЕНГШЩЗХЪЭЖДЛОРПАВЫФЯЧСМИТЬБЮюбьтимсчяфывапролджэъхзщшгнекуцйёmnbvcxzlkjhgfdsapoiuytrewq0123456789";
+        private static readonly string Alphabet = " QWERTYUIOPASDFGHJKLZXCVBNM.,;:+-*/ЁЙЦУКЕНГШЩЗХЪЭЖДЛОРПАВЫФЯЧСМИТЬБЮюбьтимсчяфывапролджэъхзщшгнекуцйёmnbvcxzlkjhgfdsapoiuytrewq0123456789";
 
         /// <summary>
         /// Добавить случайную соль

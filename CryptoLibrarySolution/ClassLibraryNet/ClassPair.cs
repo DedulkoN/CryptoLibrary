@@ -11,11 +11,11 @@ namespace ClasesCrypto
         /// <summary>
         /// Изначальный алфавит
         /// </summary>
-        private static readonly string Alphabet1 = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяabcdefghijklmnopqrstuvwxyz0123456789.,;: АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        private static readonly string Alphabet1 = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя+-*/abcdefghijklmnopqrstuvwxyz0123456789.,;: АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ";
         /// <summary>
         /// Алфавит для замены
         /// </summary>
-        private static readonly string Alphabet2 = " QWERTYUIOPASDFGHJKLZXCVBNM.,;:ЁЙЦУКЕНГШЩЗХЪЭЖДЛОРПАВЫФЯЧСМИТЬБЮюбьтимсчяфывапролджэъхзщшгнекуцйёmnbvcxzlkjhgfdsapoiuytrewq0123456789";
+        private static readonly string Alphabet2 = " QWERTYUIOPASDFGHJKLZXCVBNM.,;:ЁЙЦУКЕНГШЩЗХЪЭЖДЛОРПАВЫФЯЧСМИТЬБЮ+-*/юбьтимсчяфывапролджэъхзщшгнекуцйёmnbvcxzlkjhgfdsapoiuytrewq0123456789";
 
         /// <summary>
         /// Зашифровать строку
