@@ -3,7 +3,7 @@
 
 namespace ClasesCrypto
 {
-    /// <summary>
+    /// <summary>   
     /// Шифрование простой престановкой
     /// </summary>
     public static class ClassTransposition 
@@ -14,7 +14,7 @@ namespace ClasesCrypto
         /// <param name="CryptoLine">Шифрованная строка</param>
         /// <returns>Расшифрованная строка</returns>
         public static string DeCrypt(string CryptoLine)
-        {
+        {                                                                                                                                                                                                                                                                                                                                                                                                                      
             StringBuilder rezult = new StringBuilder();
             for (int i = 0; i < CryptoLine.Length - 1; i += 2)
             {
